@@ -1,0 +1,56 @@
+#cat file1 file2 > file3 # dlya objedineniya soderjimogo neskolkih failov i vivod ego
+# v standartnyy kanal vivoda ili v fail ispolzuetsa eta kommanda
+
+# less file1 # pozvolyaet organizovyvat postranichnuyu raboty s bolshim naborom dannyh
+
+# split # vipolnyaet razdeleniye ishodnogo faila (kollichestvo "bite" - -b," strok" - -l)
+# sort # vipolnyaet sortirovky postupaushih ei na vhod dannyh
+
+#ls -l ~ | sort -n -k5 # proizvodit chislovuyu "-n" sortirovky poluchennyh dannyh ot kommandy
+# "ls" po pyatomu stolbcu "-k"
+
+#cut # vipolnyaet filtratsiu teksta po stolbcam. V kachestve opciy komanda prinimaet nomer polya
+# "-f", razdelitel "-d" etc.
+
+#cut -d : -f1 file1 # iz mnozhestva stolbcov razdelennih simvolom ":" file1 vibiraet perviy
+
+#cat filename | sort | uniq # utilita uniq udalyaet sosedniye povtoryaushiesya stroki v faile 
+# utilitu "uniq" chasto ispolzuyut s utilitoy sort
+
+#diff file1 file2 # utilita diff proizvodit postrochnoe sravneniye failov peredannih v 
+#kachestve argumentov
+
+#tail -n3 file1 # kommandy head and tail ispolzuyutsa dlya otobrazheniya vibrannogo chisla
+
+#export peremennaya=znacheniye # ustanovka novih i izmenneniye znacheniya sushestvuyshih
+#peremennyh sredy okrujheniya osushestvlyaetsa putem exportirovaniya
+
+#unset# udalenie peremennoy
+
+#UID# soderjit chislovoy identeficator tekushego polzovatelya
+#Home# domashniy katalog tekushego polzovatelya
+#path# spisok katalogov razdelennyh dvoetochiem v kotoryh komandnaya obolochka vipolnyaet 
+#poisk faila
+#ps1# format stroki-priglasheniya
+#pwd# tekushiy katalog
+#Term# tip ispolzuyshego terminala
+#hostname# setevoye imya computera
+
+Poryadok vipolnenya labouratornoy raboty
+
+#ls -l ~ | sort -n -k5 #
+#mkdir cut_result #
+#cut -d -f1 /etc/passwd >> cut_result#
+#nano cut_result#
+change and Save file "cut_result2"
+#diff cut_result cut_result2#
+#cat cut_result >> cut_result2#
+#cat cut_result2 | sort | uniq#
+#echo $home#
+#echo $path#
+#export ps1="<\\u@\\h\\w>"
+#PS1="\[\033[0:41m\]<\u@\h\w>\$\[\033[0m\]"#
+
+
+
+
