@@ -1,0 +1,76 @@
+laboratornaya rabota nomer 2
+
+vershina kataloga - "/"
+"/" - kornevoy katalog 
+
+dlya unifikacii mestonahojdenia failov i katalogov v unix-sistemah prinyat format FHS
+(Filesystem Hierarchy Standart)
+
+objecty operatsionnoy sistemy Linux predstavleny v vide abstrakcyy faila v zavisimosty ot 
+structury i prednaznachenia faila vudelyaut neskolko tipov
+	obichiy fail (regural file)
+	specialnyy fail ustroystva (special device file)
+	faily vzaimodeystvia mejdu processamy
+	ssilky
+
+#	touch # dlya sozdaniya faila mojno ispolzovat komandy "touch"
+
+#	mkdir Name_katalog # dlya sozdannya kataloga 
+
+#	cd put_k_directorii # dlya peremesheniya mejdu katalogami failovoy sistemy primenyaetsya eta komanda
+
+dlina imeni ogranichena 255 simvolami
+
+#	ln -s Name_file Name_ssylku # dlya sozdaniya simvolicheskoy ssylky neobhodimo
+#vospolzovatsya komandoy ln s opcciey -s
+
+# rm # udalenye failov i katalogov
+
+# rmdir # udalenye katalogov
+
+# cp # kopirovaniye failov ili katalogov
+
+# mv # perenos faila ili kataloga
+
+# tree # vivesty soderjimoe kataloga v vide dereva
+
+# ln # sozdaniye yarlykov ssylok na fail ili katalog
+
+poryadok vypolneniya laboratornoy raboty
+
+# mkdir cat1 #
+#cd cat1 #
+#mkdir cat2 #
+#mkdir cat3 #
+#cd cat2 #
+#mkdir cat3 #
+#cd #
+#cd cat1/cat3 #
+#mkdir cat4 #
+#cd #
+#cd cat1/cat2 #
+#mkdir cat5 #
+#cd #
+#cd cat1/cat2/cat3 #
+#mkdir cat6 #
+#mkdir cat7 #
+#cd #
+#cd cat1 #
+#mkdir cat8 #
+#ls -s cat1/cat2/cat3/cat6 #
+#cd cat1 #
+#rm -r "dubliruyushiesya katalogi"
+#rm cat6#
+#cd #
+#mkdir dir #
+#cd dir #
+#mkdir date #
+#cd #
+#mkdir link1#
+#ln -s dir/date link1 #
+#cd dir #
+#mv date current_date #
+#cp dir/current_date cd #
+
+
+
