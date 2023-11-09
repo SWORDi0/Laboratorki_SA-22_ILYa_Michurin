@@ -1,0 +1,47 @@
+#ps# dlya polucheniya informatsii o zapushennih processah
+#-a# vidat vse proccessi sistemu vkluchaya liderov seansov
+#-d# vidat vse proccessu sistemu iskluchaya liderov seansov
+#-e# vidat vse processi sistemy
+#-x# vidat processi sistemy ne imeushie kontrolnogo terminala
+#-o# opredelyaet format vivoda v vide spiska poley
+#-u# vidat processi prinadlehjashie ukazannomu polzovatelu
+
+#ps -eo s,pid,tty,command#
+#mojno poluchit viborochnuyu informatsiyu obo vseh proccessah v sisteme
+#alternativnum sposobom uznat o sostoyanii proccesov v realnom vremeny mojno s pomoshiu 
+#specialnuh kombinatsui, nagjav "h"
+
+#chtoby poluchit informatsiu o zapushennih v sisteme proccesah v vide dereva mojno use "pstree"
+
+#firefox csc.sibsutis.ru# kommanda neobichnaya
+
+#jobs# - poluchit spisok zadaniy kotorye zapusheni cherez terminal
+
+#fg %2# - vernut zapushenniy v fone process na perednyy plan
+
+#ctrl + z# ostanovlennyy rezhim
+
+#bg %2# - vipolnenjie v fonovom rejhime
+
+#kill -SIGINT 124672# - pozvolyaet posilat opredelennyy signal processu
+
+#poluchit spisok signalov s pomoshu opcii -l
+
+# kill -l poslaat signal neskolkin processam mojno s pomoshiu komandy "killall"
+
+#killall gedit# - zavershit vse processi tekushego polzovatelya s imenem gedit
+
+Poryadok vipolnenjiya laboratornoy raboty
+
+#mkdir ps -u root --sort=ppid > proc1
+#ps -u username#
+#top#
+klatcaem po "u,f,r,d,l"
+#top -d 1 -o %CPU#
+#pstree | grep firefox
+#gedit &#
+#gedit &#
+#jobs#
+#kill -9 <PID>#
+#kill -15 <PID>#
+#killall -u admin1# 
