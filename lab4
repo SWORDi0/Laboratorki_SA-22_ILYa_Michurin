@@ -1,0 +1,84 @@
+#-name# imya faila
+#-type# tip faila
+#-newer# faily s naimenshey datou modificatsii
+#-mtime# data modificatsii faila
+#-size# razmer faila
+#-exec# vipolneniye nad naidenimi failami ukazannou daty
+#-delete# udaleniye naidenyh failov
+
+# $find ~-name "*.txt" -type f -mtime -3# nekotorye opcii mogut prinimat argument n so znakom
+#znacheniu bolshe n, "-n" dlya znacheniy menshe n
+
+#$ find ~\(size +100m\) -and \(-not -type d \)
+#komanda find podderjivaet objedinexhie shablonov poiska v logocheskie virajheniye s pomoshiu
+#opciu operatorov -or, -and, -not
+
+#locate name_file# alternativniu sposob nahozhdenyua faila
+
+#whereis komanda# pozvolyaet vipolnit poisk raspolozheniya ispolnyaemih failov
+#which# vipolnyaet poisk puti k ispolnyaemomu faily dlya opredelennpy komandy
+
+#cat /var/log/mylog | grep 'warning'# dlya poiska strok v faile soderjashih opredelenniy
+#shablon
+#-n,-c,-i,-v# vivod nomera stroki, vivod kollihestva strok, ignorirovat registr simvolov, vivod
+#vseh strok
+
+#find ~/mydir -type f -name filename | xargs ls -l
+#komanda xargs preobrasuet postupaushie yey na vhod stroki v argumenty dlya zadannoy komandy
+
+#gzip file1 file2 file3# szhatie odnogo ili neskolkih failov
+#perenapravit informatsiy na standartnuy vivod s sohranjeniem ishodnogo faila s pomoshiu "-c"
+
+#gzip -l file1.gz# raspakovka s pomoshiu "-d" ili "gunip" stepen informatsyy o szhatii "-l"
+
+#-r# dobavleniye failov k arhivy
+#-c# sozdaniye novogo arhiva
+#--delete# udaleniye failov iz arhiva
+#-t# vivod soderjimogo faila
+#-x# izvlecheniye failov iz arhiva
+#-f# ispoljhovaniye arhivnogo faila
+#-v# vivod spiska obrabativaemyh failov
+
+#tar -cvf myarchive.tar file1 file2 file3# sozdanye novogo arhivnogo faila
+#tar -lf myarhive.tar# prosmotr
+
+#zip -r archive.zip name_directory# funktcia szhatia and archivatsii dlya pomesheniya v arhiv
+#directorii vmeste s vlozhennimy failami ispolzuetsa flag -r
+
+#unzip -l archive.zip name_directory# raspakovka, dlya dop infa - "-l"
+
+poryadok vipolnjeniya laboratornoy raboty 4
+
+#find /home/admin1 -type f | wc -l#
+#mkdir filelist1.txt"
+#find . -type f ! - type l > filelist1.txt#
+#mkdir filelist2.txt#
+#find /home/username -type f -size +5k -exec ls -l {} \\; > filelist2.txt#
+#locate bash#
+#man whereis#
+#mkdir filelist3.txt#
+#bash grep\'/home/\' passwd > filelist3.txt#
+#gzip -c -1 filelist1.txt > filelist1.txt.gz#
+minimalniy uroven szhatiya
+#gzip -c -6 filelist1.txt > filelist1.txt.gz#
+sredniy uroven szhatiya
+#gzip -c -9 filelist1.txt > filelist1.txt.gz#
+maksimalnyy yroven szhatiya
+#gzip -l filelist1.txt.gz#
+
+#bzip2 -1 filelist1.txt#
+#bzip2 -5 filelist1.txt#
+#bzip2 -9 filelist1.txt#
+
+#bzip2 -d filelist1.txt#
+
+u gzip skorost szhatia i raspakovki bistree
+
+#tar -cvf archive.tar filelist1.txt filelist2.txt filelist3.txt#
+#bash -cvf archive.tar filelist1.txt filelist2.txt filelist3.txt tar -rvf archive.tar passwd#
+#zip archive.zip filelist1.txt filelist2.txt filelist3.txt passwd#
+
+#ls -l archive.tar#
+#ls -l archive.zip#
+#bash tar -xzvf blackbox.tar.gz#
+
